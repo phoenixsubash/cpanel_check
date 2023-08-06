@@ -7,7 +7,7 @@ app.use(express.json({ inflate: false }));
 
 app.get("/health", (req, res) => {
   console.log("req", req);
-  res.write({ check: "Hello World!!!" });
+  res.json({ check: "Hello World!!!" });
 });
 
 app.listen(process.env.PORT || 3000);
